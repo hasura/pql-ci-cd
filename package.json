@@ -1,0 +1,44 @@
+{
+  "name": "pql-ci-cd",
+  "version": "1.0.3",
+  "description": "CI/CD sync tool for PromptQL projects",
+  "type": "module",
+  "main": "src/index.ts",
+  "bin": {
+    "pql-ci-cd": "./src/dist/cli.js"
+  },
+  "files": [
+    "src/**/*",
+    "!src/node_modules",
+    "build.ts",
+    "README.md",
+    "CONTRIBUTING.md"
+  ],
+  "scripts": {
+    "build": "bun run build.ts",
+    "dev": "bun run src/index.ts",
+    "prepack": "bun run build",
+    "prepublishOnly": "bun run build",
+    "test": "bun run dev setup"
+  },
+  "keywords": [
+    "hasura",
+    "promptql",
+    "ci-cd",
+    "github-actions"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@octokit/rest": "^20.0.2",
+    "dotenv": "^16.3.1",
+    "libsodium-wrappers": "^0.7.11"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "bun-types": "latest"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
