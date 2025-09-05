@@ -1,9 +1,13 @@
 {
   "name": "pql-ci-cd",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "CI/CD sync tool for PromptQL projects",
   "type": "module",
   "main": "src/index.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hasura/pql-ci-cd.git"
+  },
   "bin": {
     "pql-ci-cd": "./src/dist/cli.js"
   },
